@@ -1,0 +1,24 @@
+{
+  "name": "blg440fall2024",
+  "version": "1.0.0",
+  "description": "This repo is for blg440fall2024 financial application project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itu-itis21-gizaw21/blg440fall2024.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itu-itis21-gizaw21/blg440fall2024/issues"
+  },
+  "homepage": "https://github.com/itu-itis21-gizaw21/blg440fall2024#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.3"
+  }
+}
