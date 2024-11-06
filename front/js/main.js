@@ -35,7 +35,9 @@ function serverRequest (url, method, data, callback) {
         if (xhr.readyState == 4 && xhr.status != 200)
           return callback({ success: false, error: 'network_error' })
         else if (xhr.readyState == 4 && xhr.responseText) {
-          const data = JSON.parse(xhr.responseText);
+          console.log(xhr.responseText);
+          console.log(typeof xhr.responseText);
+          const data = xhr.responseText;
           return callback(data);
         }
       } catch (err) {
@@ -61,7 +63,28 @@ window.addEventListener('load', function() {
             
             serverRequest('/signup', 'POST', { username, email, password }, (data) => {
                 console.log(data);
+                if (data) {
+                    window.location = '/index.html';
+                } else {
+                    console.log(data.error);
+                }
             });
         }
+
+        if (e.target.closest('.sign-in')) {
+          e.preventDefault();
+          const email = document.querySelector('.email').value;
+          const password = document.querySelector('.password').value;
+          console.log("123", email, password);
+          
+          serverRequest('/signin', 'POST', { email, password }, (data) => {
+              console.log(data);
+              if (data) {
+                  window.location = '/index.html';
+              } else {
+                  console.log(data.error);
+              }
+          });
+      }
     });
 });

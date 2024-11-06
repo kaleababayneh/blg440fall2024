@@ -4,7 +4,8 @@
   "description": "This repo is for blg440fall2024 financial application project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,12 @@
   },
   "homepage": "https://github.com/itu-itis21-gizaw21/blg440fall2024#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "mongoose": "^8.7.3"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.3",
+    "nodemon": "^3.1.7"
   }
 }

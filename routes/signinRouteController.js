@@ -1,6 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', 
-    signinController
+const signinControllerGet = require('../controllers/signinController/get');
+const signinControllerPost = require('../controllers/signinController/post');
+
+router.post('/', 
+    signinControllerPost
 );
+
+router.get('/',
+   signinControllerGet
+);
+
+module.exports = router;
