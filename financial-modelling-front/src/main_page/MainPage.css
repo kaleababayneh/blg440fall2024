@@ -1,0 +1,90 @@
+/* src/components/HomePage.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-page {
+    background-color: #e0e6ff;
+    color: #333;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #b3c4ff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.login-btn, .signup-btn {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-btn {
+    background-color: #e0e6ff;
+    color: #333;
+}
+
+.signup-btn {
+    background-color: #333;
+    color: #e0e6ff;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}

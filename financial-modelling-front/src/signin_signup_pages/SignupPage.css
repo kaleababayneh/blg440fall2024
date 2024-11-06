@@ -1,0 +1,162 @@
+/* src/components/SignupPage.css */
+
+.signup-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #b3c4ff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #e0e6ff;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.signup-tab.active {
+    background-color: #6c8eff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form label {
+    text-align: left;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.signup-form input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.signup-button {
+    background-color: #6c8eff;
+    color: white;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-button {
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+}
+
+.itu-button {
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+}
+
+.apple-button {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.google-button img,
+.apple-button img {
+    width: 20px;
+    margin-right: 8px;
+}
+.homepage {
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.signup-btn {
+    background-color: #6c8eff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #b3c4ff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
