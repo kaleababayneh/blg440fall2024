@@ -19,13 +19,19 @@ const UserSchema = new moongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+ 
 });
 
-UserSchema.methods.comparePassword = function(password, cb) {
-    bcrypt.compare(password, this.password, cb);
+UserSchema.methods.comparePassword = function(password) {
+    bcrypt.compare(password, this.password, (err, isMatch) => {
+        if (err) {
+            return err;
+        }
+        return isMatch;
+    }
+    );
 }
-
 
 UserSchema.methods.generateAuthToken = function() {
     return jwt.sign({ _id: this._id }, process.env.JWT_PRIVATE_KEY);
