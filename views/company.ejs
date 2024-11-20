@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company: <%= companyName %></title>
+</head>
+<body>
+  <h1>Company: <%= companyName %></h1>
+
+  <!-- Display General Information -->
+  <h2>General Information</h2>
+  <ul>
+    <% for (const [key, value] of Object.entries(generalInfo)) { %>
+      <li><strong><%= key %>:</strong> <%= value %></li>
+    <% } %>
+  </ul>
+
+  <!-- Display Financial Data -->
+  <h2>Financial Data for Date: <%= selectedDate %></h2>
+  <ul>
+    <% for (const [key, value] of Object.entries(financialData)) { %>
+      <li><strong><%= key %>:</strong> <%= value %></li>
+    <% } %>
+  </ul>
+
+  <!-- Dropdown Menu to Select a Date -->
+  <h3>Select a Date</h3>
+  <form action="" method="get">
+    <label for="date">Date:</label>
+    <select name="Date" id="date" onchange="this.form.submit()">
+      <% availableDates.forEach((date, index) => { %>
+        <option value="<%= index %>" <%= date === selectedDate ? 'selected' : '' %>><%= date %></option>
+      <% }) %>
+    </select>
+    <noscript><input type="submit" value="Submit"></noscript>
+  </form>
+  
+
+</body>
+</html>
