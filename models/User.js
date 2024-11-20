@@ -24,14 +24,8 @@ const UserSchema = new moongoose.Schema({
 });
 
 UserSchema.methods.comparePassword = function(password) {
-    bcrypt.compare(password, this.password, (err, isMatch) => {
-        if (err) {
-            return err;
-        }
-        return isMatch;
-    }
-    );
-}
+    return bcrypt.compare(password, this.password);
+};
 
 UserSchema.methods.generateAuthToken = function() {
     return jwt.sign({ _id: this._id }, process.env.JWT_PRIVATE_KEY);

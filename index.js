@@ -22,10 +22,25 @@ app.use('/', indexRouteController);
 app.use('/signup', signupRouteController);
 app.use('/signin', signinRouterController);
 
+app.use((req, res, next) => {
+  console.log('Request URL:', req.url);
+  console.log('Request Method:', req.method);
+  next();
+});
+
+app.use((err, req, res, next) => {
+  console.error('Unhandled Error:', err);
+  
+  // Ensure response hasn't been sent
+  if (!res.headersSent) {
+      res.status(500).sendFile(path.join(__dirname, 'front', 'error.html'));
+  }
+});
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 
- mongoose.connect('mongodb://localhost:27017/blg440fall2024', {
+mongoose.connect('mongodb://localhost:27017/blg440fall2024', {
   
- });
+});

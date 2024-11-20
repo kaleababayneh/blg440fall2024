@@ -2,41 +2,33 @@ const path = require('path');
 const User = require('../../models/User');
 const bcrypt = require('bcrypt');
 
-module.exports = async (req, res) => {
+// Adjust this to your User model's actual location
 
-  
+module.exports = async (req, res, next) => {
     const { username, email, password } = req.body;
 
-   
 
     try {
-        
         const user = new User({
             username,
             email,
-            password: encryptPassword(password)
+            password: encryptPassword(password),
         });
-        
+
         await user.save();
 
         const token = user.generateAuthToken();
 
-        // Set the cookie  with the token
-
-        res.cookie("x-auth-token", token, {
-            httpOnly: true
-        });
+        // Set the cookie with the token
+        //res.cookie('authToken', token, { httpOnly: true });
 
         // Redirect to the desired page
-
-        res.redirect('/index.html');
+        return res.status(200).json({success: true});
     } catch (err) {
-        console.log(err);
-        res.status(400).send(err.message);
+        return res.status(400).json({success: false, error: err.message});
     }
-
-    return user;
-}
+};
+    
 
 
 function encryptPassword(password) {
