@@ -88,3 +88,68 @@ body, html {
     max-width: 100%;
     height: auto;
 }
+
+.why-financial-ai {
+    background-color: #e0eaff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .why-financial-ai h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .features-list {
+    list-style-type: disc;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .features-list li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+
+  .how-it-works {
+    background-color: #e0eaff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .step {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .step img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .step h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 0.9em;
+    color: #333;
+  }
