@@ -5,29 +5,11 @@ import analysisIcon from "../photos/analysis.svg";
 import adaptationIcon from "../photos/adaptation.svg";
 import integrationIcon from "../photos/integration.svg";
 import reportingIcon from "../photos/reporting.svg";
+import NavigationBar from "../navigation_bar/NavigationBar";
 
 const MainPage = ({ openSignupModal, openSigninModal, goToDashboard }) => {
   return (
     <div className="main-page">
-      <header className="navbar">
-        <div className="logo">Financial AI</div>
-        <nav className="nav-links">
-          <a href="#home" onClick={goToDashboard}>
-            Home
-          </a>
-          <a href="#features">Features</a>
-          <a href="#team">Team</a>
-          <a href="#resources">Resources</a>
-        </nav>
-        <div className="auth-buttons">
-          <button className="login-btn" onClick={openSigninModal}>
-            Login
-          </button>
-          <button className="signup-btn" onClick={openSignupModal}>
-            Signup
-          </button>
-        </div>
-      </header>
       <main className="hero-section">
         <div className="hero-text">
           <h1>Empower Your Financial Future with AI-Driven Insights</h1>

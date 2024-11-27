@@ -1,0 +1,67 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #b3c4ff;
+  z-index: 1000;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.marquee-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+.auth-buttons {
+  display: flex;
+}
+
+.signin-btn,
+.signup-btn {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.signin-btn {
+  background-color: #e0e6ff;
+  color: #333;
+}
+
+.signup-btn {
+  background-color: #333;
+  color: #e0e6ff;
+}
+
+body {
+  padding-top: 80px;
+}

@@ -12,52 +12,8 @@ body, html {
     min-height: 100vh;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #b3c4ff;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.nav-links a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-}
-
-.nav-links a:hover {
-    color: #000;
-}
-
 .auth-buttons {
     display: flex;
-}
-
-.login-btn, .signup-btn {
-    margin-left: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.login-btn {
-    background-color: #e0e6ff;
-    color: #333;
-}
-
-.signup-btn {
-    background-color: #333;
-    color: #e0e6ff;
 }
 
 .hero-section {
