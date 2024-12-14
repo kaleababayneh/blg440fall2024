@@ -8,6 +8,8 @@ const  app  =  express();
 const indexRouteController = require('./routes/indexRouteController');
 const signupRouteController = require('./routes/signupRouteController');
 const signinRouterController = require('./routes/signinRouteController');
+const profileRouteController = require('./routes/profileRouteController');
+const otpRoutes = require('./routes/otpRoutes');
 
 app.use(express.static(path.join(__dirname, '/front')));
 
@@ -21,6 +23,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', indexRouteController);
 app.use('/signup', signupRouteController);
 app.use('/signin', signinRouterController);
+app.use('/profile', profileRouteController);
+app.use('/api', otpRoutes);
+
 
 app.use((req, res, next) => {
   console.log('Request URL:', req.url);
