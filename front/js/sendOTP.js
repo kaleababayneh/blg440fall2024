@@ -11,6 +11,8 @@ window.addEventListener('load', () => {
             console.log("yy",email);
             const response = await fetch(`/api/sendOTP?email=${email}`);
             const result = await response.json();
+
+            
             // console.log(result);
             alert(result.message);
             if (result.success) {
