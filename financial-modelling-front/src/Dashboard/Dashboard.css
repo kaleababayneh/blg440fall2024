@@ -1,70 +1,68 @@
 .dashboard-container {
   margin-top: 100px;
   padding: 40px;
-  background-color: #e9eff3; /* Light blue-gray background */
-  border-radius: 12px; /* Rounded container edges */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle container shadow */
+  background-color: #e9eff3;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .card-row,
 .chart-row {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Uniform spacing between elements */
-  margin-bottom: 30px; /* Consistent spacing for rows */
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .chart-container {
   flex: 1;
-  background-color: #ffffff; /* White card background */
-  padding: 20px; /* Padding for content */
-  margin: 0 10px; /* Slight spacing between cards */
-  border: 1px solid #d1d5db; /* Light gray border */
-  border-radius: 12px; /* Rounded card edges */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Center content */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
-  overflow: hidden; /* Ensures content doesn't overflow */
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
-/* Hover effect for chart-container */
 .chart-container:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .chart-container h4 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2c3e50; /* Dark blue-gray for titles */
-  margin-bottom: 15px; /* Space below title */
+  color: #2c3e50;
+  margin-bottom: 15px;
 }
 
-/* Add colors to the card header */
 .card-row .chart-container:nth-child(1) {
-  border-color: #3498db; /* Blue */
-  background-color: #e6f7ff; /* Light blue */
+  border-color: #3498db;
+  background-color: #e6f7ff;
 }
 
 .card-row .chart-container:nth-child(2) {
-  border-color: #2ecc71; /* Green */
-  background-color: #e0f8e0; /* Light green */
+  border-color: #2ecc71;
+  background-color: #e0f8e0;
 }
 
 .card-row .chart-container:nth-child(3) {
-  border-color: #9b59b6; /* Purple */
-  background-color: #f3e8f3; /* Light purple */
+  border-color: #9b59b6;
+  background-color: #f3e8f3;
 }
 
 .card-row .chart-container:nth-child(4) {
-  border-color: #f39c12; /* Orange */
-  background-color: #fff3e0; /* Light orange */
+  border-color: #f39c12;
+  background-color: #fff3e0;
 }
 
 .chart-row > .chart-container:first-child {
-  margin-left: 0; /* Remove margin for the first card */
+  margin-left: 0;
 }
 
 .chart-row > .chart-container:last-child {
-  margin-right: 0; /* Remove margin for the last card */
+  margin-right: 0;
 }

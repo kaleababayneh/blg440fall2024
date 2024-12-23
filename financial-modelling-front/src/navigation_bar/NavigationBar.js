@@ -13,6 +13,8 @@ const Navigator = ({ openSigninModal, openSignupModal }) => {
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/dashboard">Dashboard</Link>
+          <Link to="/upload">Upload</Link>
+          <Link to="/forecast">Forecast</Link>
           <button className="signin-btn" onClick={openSigninModal}>
             Sign In
           </button>
