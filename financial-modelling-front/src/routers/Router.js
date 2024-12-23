@@ -8,6 +8,8 @@ import SignupPage from "../signin_signup_pages/SignupPage";
 import Dashboard from "../dashboard/Dashboard";
 import Upload from "../upload_page/UploadPage";
 import Forecast from "../forecast_page/Forecast";
+import ScenarioAnalysis from "../ScenarioAnalysis/ScenarioAnalysis";
+import DataPage from "../DataPage/DataPage";
 
 const AppRouter = ({
   openSigninModal,
@@ -33,6 +35,8 @@ const AppRouter = ({
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/forecast" element={<Forecast />} />
+          <Route path="/past-decisions" element={<DataPage />} />
+          <Route path="/scenario-analysis" element={<ScenarioAnalysis />} />
         </Routes>
       </div>
       {isSigninOpen && <SigninPage closeSigninModal={closeSigninModal} />}
