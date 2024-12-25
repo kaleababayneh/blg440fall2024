@@ -5,11 +5,12 @@ import Navigator from "../navigation_bar/NavigationBar";
 import MainPage from "../main_page/MainPage";
 import SigninPage from "../signin_signup_pages/SigninPage";
 import SignupPage from "../signin_signup_pages/SignupPage";
-import Dashboard from "../dashboard/Dashboard";
+import Dashboard from "../Dashboard/Dashboard";
 import Upload from "../upload_page/UploadPage";
 import Forecast from "../forecast_page/Forecast";
 import ScenarioAnalysis from "../ScenarioAnalysis/ScenarioAnalysis";
 import DataPage from "../DataPage/DataPage";
+import LessonsLearned from "../components/PastDecisions";
 
 const AppRouter = ({
   openSigninModal,
@@ -35,8 +36,8 @@ const AppRouter = ({
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/forecast" element={<Forecast />} />
-          <Route path="/past-decisions" element={<DataPage />} />
           <Route path="/scenario-analysis" element={<ScenarioAnalysis />} />
+          <Route path="/lessons-learned" element={<LessonsLearned />} />
         </Routes>
       </div>
       {isSigninOpen && <SigninPage closeSigninModal={closeSigninModal} />}

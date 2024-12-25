@@ -1,22 +1,63 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavigationBar.css";
 import MacroEconomicDatas from "./MacroEconomicDatas";
+
+// Import the logo directly from the src/photos folder
+import logoPath from "../photos/file.png";
 
 const Navigator = ({ openSigninModal, openSignupModal }) => {
   return (
     <div>
       <nav className="navbar">
         <div className="logo">
-          <Link to="/">Financial AI</Link>
+          {/* Use a non-clickable container for the logo and text */}
+          <div className="logo-container">
+            <img
+              src={logoPath}
+              alt="Financial AI Logo"
+              className="logo-image"
+            />
+            <span className="logo-text">Financial AI</span>
+          </div>
         </div>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/dashboard">Dashboard</Link>
-          <Link to="/upload">Upload</Link>
-          <Link to="/forecast">Forecast</Link>
-          <Link to="/past-decisions">Past Decisions</Link>
-          <Link to="/scenario-analysis">Scenario Analysis</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "non-active-link" : "")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            to="/scenario-analysis"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Scenario Analysis
+          </NavLink>
+          <NavLink
+            to="/upload"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Upload
+          </NavLink>
+          <NavLink
+            to="/forecast"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Forecast
+          </NavLink>
+          <NavLink
+            to="/lessons-learned"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Past Decisions
+          </NavLink>
           <button className="signin-btn" onClick={openSigninModal}>
             Sign In
           </button>
