@@ -35,6 +35,12 @@ const Navigator = ({ openSigninModal, openSignupModal }) => {
             Dashboard
           </NavLink>
           <NavLink
+            to="/companies"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Companies
+          </NavLink>
+          <NavLink
             to="/scenario-analysis"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
@@ -51,12 +57,6 @@ const Navigator = ({ openSigninModal, openSignupModal }) => {
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Forecast
-          </NavLink>
-          <NavLink
-            to="/lessons-learned"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Past Decisions
           </NavLink>
           <button className="signin-btn" onClick={openSigninModal}>
             Sign In
