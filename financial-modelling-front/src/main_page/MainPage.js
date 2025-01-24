@@ -18,7 +18,14 @@ import {
   Legend,
 } from "recharts";
 
-const MainPage = ({ openSignupModal, openSigninModal, goToDashboard }) => {
+const MainPage = ({
+  openSignupModal,
+  openSigninModal,
+  goToDashboard,
+  isAuthenticated,
+  user,
+  onLogout,
+}) => {
   const pieData = [
     { name: "Scenario Planning", value: 30 },
     { name: "AI Predictions", value: 25 },
@@ -44,6 +51,21 @@ const MainPage = ({ openSignupModal, openSigninModal, goToDashboard }) => {
 
   return (
     <div className="main-page">
+      {/* Add Profile or Buttons */}
+      <header className="auth-section">
+        {!isAuthenticated ? (
+          <div>
+            <button onClick={openSigninModal}>Sign In</button>
+            <button onClick={openSignupModal}>Sign Up</button>
+          </div>
+        ) : (
+          <div className="profile-section">
+            <p>Welcome, {user.name}!</p>
+            <button onClick={onLogout}>Logout</button>
+          </div>
+        )}
+      </header>
+
       <main className="hero-section">
         <div className="hero-text">
           <h1>Empower Your Financial Future with AI-Driven Insights</h1>
@@ -52,6 +74,8 @@ const MainPage = ({ openSignupModal, openSigninModal, goToDashboard }) => {
           <img src={logo} alt="logo" />
         </div>
       </main>
+
+      {/* The rest of your MainPage content remains unchanged */}
       <section className="why-financial-ai">
         <h2>WHY FINANCIAL AI?</h2>
         <ul className="features-list">
@@ -83,6 +107,7 @@ const MainPage = ({ openSignupModal, openSigninModal, goToDashboard }) => {
           </li>
         </ul>
       </section>
+
       {/* Updated Features Section */}
       <section className="features-of-financial-ai">
         <h2>FEATURES OF FINANCIAL AI</h2>

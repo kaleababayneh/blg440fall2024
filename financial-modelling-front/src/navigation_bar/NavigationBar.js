@@ -1,25 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavigationBar.css";
+import logoPath from "../photos/file.png";
 import MacroEconomicDatas from "./MacroEconomicDatas";
 
-// Import the logo directly from the src/photos folder
-import logoPath from "../photos/file.png";
-
-const Navigator = ({ openSigninModal, openSignupModal }) => {
+const Navigator = ({
+  openSigninModal,
+  openSignupModal,
+  isAuthenticated,
+  user,
+  onLogout,
+}) => {
   return (
     <div>
       <nav className="navbar">
-        <div className="logo">
-          {/* Use a non-clickable container for the logo and text */}
-          <div className="logo-container">
-            <img
-              src={logoPath}
-              alt="Financial AI Logo"
-              className="logo-image"
-            />
-            <span className="logo-text">Financial AI</span>
-          </div>
+        <div className="logo-container">
+          <img src={logoPath} alt="Financial AI Logo" className="logo-image" />
+          <span className="logo-text">Financial AI</span>
         </div>
         <div className="nav-links">
           <NavLink
@@ -28,42 +25,40 @@ const Navigator = ({ openSigninModal, openSignupModal }) => {
           >
             Home
           </NavLink>
-          <NavLink
-            to="/dashboard"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
+          <NavLink to="/dashboard" className="nav-item">
             Dashboard
           </NavLink>
-          <NavLink
-            to="/companies"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
+          <NavLink to="/companies" className="nav-item">
             Companies
           </NavLink>
-          <NavLink
-            to="/scenario-analysis"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
+          <NavLink to="/scenario-analysis" className="nav-item">
             Scenario Analysis
           </NavLink>
-          <NavLink
-            to="/upload"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Upload
-          </NavLink>
-          <NavLink
-            to="/forecast"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
+          <NavLink to="/forecast" className="nav-item">
             Forecast
           </NavLink>
-          <button className="signin-btn" onClick={openSigninModal}>
-            Sign In
-          </button>
-          <button className="signup-btn" onClick={openSignupModal}>
-            Sign Up
-          </button>
+          <NavLink to="/multiple" className="nav-item">
+            Upload
+          </NavLink>
+
+          {/* Updated sign in sign up condition branch  */}
+          {!isAuthenticated ? (
+            <div className="auth-buttons">
+              <button className="signin-btn" onClick={openSigninModal}>
+                Sign In
+              </button>
+              <button className="signup-btn" onClick={openSignupModal}>
+                Sign Up
+              </button>
+            </div>
+          ) : (
+            <div className="user-info">
+              <span className="username"> {user.name}</span>
+              <button className="logout-btn" onClick={onLogout}>
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </nav>
       <MacroEconomicDatas />
